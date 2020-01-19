@@ -30,12 +30,12 @@ router.get("/login",function(req,res){
 });
 
 router.post("/login",passport.authenticate("local", {
-	successRedirect : "/",
+
+	//successRedirect : "/",
 	failureRedirect: "/login"
 }),function(req,res){
-	//var backurl = req.header('referer') || '/';
-	//res.json({redir: backurl});
-	//window.history.go(-1);
+	res.redirect(req.session.returnTo || '/');
+    delete req.session.returnTo;
 });
 
 
