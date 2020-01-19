@@ -1,5 +1,5 @@
-var express=require("express");
-var router=express.Router();
+var express			=require("express");
+var router			=express.Router();
 var User 			=require("../model/user");
 var passport 		=require('passport');
 
@@ -32,7 +32,11 @@ router.get("/login",function(req,res){
 router.post("/login",passport.authenticate("local", {
 	successRedirect : "/",
 	failureRedirect: "/login"
-}),function(req,res){});
+}),function(req,res){
+	//var backurl = req.header('referer') || '/';
+	//res.json({redir: backurl});
+	//window.history.go(-1);
+});
 
 
 //logout
