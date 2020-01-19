@@ -1,24 +1,25 @@
 var express=require("express");
 var router=express.Router();
-
-var User 			=require('../models/user.js');
+var User 			=require("../model/user");
 var passport 		=require('passport');
+
 router.get("/register",function(req,res){
 	res.render("register.ejs");
 });
 
 router.post("/register",function(req,res){
-	var Newuser= new User({email: req.body.email, phonenumber: req.body.phonenumber, name: req.body.name});
+	var Newuser= new User({username: req.body.username, email: req.body.email, phonenumber: req.body.phonenumber});
 	User.register(Newuser, req.body.password, function(err, user){
 		if(err){
-			req.flash("error", err.message);
 			return res.render("register.ejs");
 		}
+		else{
+			console.log(user.username);
+		}
 		passport.authenticate("local")(req, res, function(){
-			req.flash("success","Your account is created, " + user.name)
-			res.redirect("/campgrounds")
-		})
-	})
+			res.redirect("/")
+		});
+	});
 });
 
 //login
@@ -28,10 +29,9 @@ router.get("/login",function(req,res){
 	
 });
 
-router.post("/login",passport.authenticate("local",{
-	successRedirect : "/campgrounds",
-	failureRedirect: "/login",
-
+router.post("/login",passport.authenticate("local", {
+	successRedirect : "/",
+	failureRedirect: "/login"
 }),function(req,res){});
 
 
@@ -39,8 +39,7 @@ router.post("/login",passport.authenticate("local",{
 
 router.get("/logout",function(req,res){
 	req.logout();
-	req.flash("success", "you have been logged out")
-	res.redirect("/campgrounds");
+	res.redirect("/");
 });
 
 module.exports=router;
