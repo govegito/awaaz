@@ -3,7 +3,7 @@ var router=express.Router();
 
 
 router.get("/", function(req,res){
-    res.render("../views/about.ejs");
+    res.render("../views/ourwork/index.ejs");
 });
 
 module.exports=router;
