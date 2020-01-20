@@ -30,9 +30,13 @@
                         About
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Vision And Mission</a>
-                        <a class="dropdown-item" href="#">History</a>
-                        <a class="dropdown-item" href="#">Speech Disability</a>
+                        <a class="dropdown-item" href="/aboutus/speech">Speech Disability</a>
+                        <a class="dropdown-item" href="/aboutus/vision">Vision And Mission</a>
+                        <a class="dropdown-item" href="/aboutus/ourteam">Our team</a>
+                        <a class="dropdown-item" href="/aboutus/employ">Employment opportunities</a>
+                        <a class="dropdown-item" href="/aboutus/awards">Awards</a>
+                        
+                        
                       </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Our Work</a></li>
@@ -41,9 +45,9 @@
                           Support Our Work
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Support Us</a>
-                          <a class="dropdown-item" href="#">Give</a>
-                          <a class="dropdown-item" href="#">Connect/Join</a>
+                          <a class="dropdown-item" href="/support/">Support Us</a>
+                          <a class="dropdown-item" href="/support/payment">Give</a>
+                          <a class="dropdown-item" href="/support/join">Connect/Join</a>
                         </div>
                       </li>
                       <li class="nav-item"><a class="nav-link" href="#">News</a></li>
@@ -62,9 +66,16 @@
 </div>
 <div>
     <ul class="navbar-nav navbar-right navul2">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <%if(!currentUser){%>
+        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+        <%}else{%>
+          <li class="nav-item float-left">
+					  <a class="nav-link" href="/logout">Logout</a>
+					</li>
+					<%}%>
+
     </ul>
 </div>
 </nav>
