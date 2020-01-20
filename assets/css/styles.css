@@ -1,0 +1,45 @@
+.headerimages{
+    padding-left: 50px;
+}
+.headerimages > #myimg{
+    margin: 15px;
+    height: 80px;
+    width: 80px;
+}
+#myimg2{
+    width: 100px;
+    height: 100px;
+}
+button.navbar-toggler{
+    color: black;
+}
+.nav-item{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 6px;
+}
+.navul1,.navul2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+#foot1 > div{
+    padding: 10px 20px;
+}
+#foot1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000100;
+    color: antiquewhite;
+}
+#foot2ul>li{margin:4px 5px;}
+#foot2ul{margin-top: 3px;}
+#foot2,#foot2ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d3d3d3;
+    list-style-type: none;
+}

@@ -17,9 +17,10 @@ var supportroutes           = require("./routes/support.js")
 
 mongoose.connect("mongodb://localhost:27017/awaaz", { useNewUrlParser: true });
 app.set('view engine', 'ejs');
-app.use('/views/assets', express.static('views/assets'));
-app.use(bodyparser.urlencoded({extended:true}));
+//app.use('/assets', express.static('/assets'));
+app.use(express.static(__dirname + "/assets"));
 
+app.use(bodyparser.urlencoded({extended:true}));
 //===========================================================================================================
 //PASSPORT CONFIG
 app.use(methodOverride("_method"));
