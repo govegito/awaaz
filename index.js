@@ -13,8 +13,9 @@ var awardgalleryroutes      = require("./routes/awardgallery.js");
 var newsandeventsroutes     = require("./routes/newsandevents.js");
 var authorizationroutes     = require("./routes/authorization.js");
 var contactroutes           = require('./routes/contact.js');
-var supportroutes           = require("./routes/support.js")
-
+var supportroutes           = require("./routes/support.js");
+var footerroutes            = require("./routes/footerlinks.js");
+var eventroutes             = require("./routes/events.js");
 mongoose.connect("mongodb://localhost:27017/awaaz", { useNewUrlParser: true });
 app.set('view engine', 'ejs');
 //app.use('/assets', express.static('/assets'));
@@ -49,6 +50,8 @@ app.use("/ourwork",  ourworkroutes);
 app.use(             authorizationroutes);
 app.use('/contacts', contactroutes);
 app.use("/support",  supportroutes);
+app.use('/web', footerroutes);
+app.use('/events',eventroutes);
 app.get("/", function(req, res){
 	res.render('landing.ejs');
 });
