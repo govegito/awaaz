@@ -7,10 +7,8 @@ router.get("/WSD",(req,res)=>{
 router.get("/global-forum",(req,res)=>{
     res.render("../views/events/globalforum.ejs");
 });
-router.get("/int-summit",(req,res)=>{
-    res.render("../views/events/isummit.ejs");
+router.get("/congress",(req,res)=>{
+    res.render("../views/events/natcongress.ejs");
 });
-router.get("/awards",(req,res)=>{
-    res.render("../views/events/awards.ejs");
-});
+
 module.exports = router;

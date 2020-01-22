@@ -43,3 +43,18 @@ button.navbar-toggler{
     background-color: #d3d3d3;
     list-style-type: none;
 }
+.forumjumbo{
+    background-image: url("https://www.wfh.org/globalforum/en/image/slider-home/gf_slider_bg.jpg");
+    background-size: cover;
+    color: #fff;
+}
+.j3{
+    width: 50px;
+}
+.j2{
+border: 3px solid blue;
+border-radius: 10%;
+}
+.congress{
+    width:60%;
+}
