@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express                 = require('express');
 var app                     = express();
 var mongoose		        = require('mongoose');
@@ -16,12 +17,18 @@ var contactroutes           = require('./routes/contact.js');
 var supportroutes           = require("./routes/support.js");
 var footerroutes            = require("./routes/footerlinks.js");
 var eventroutes             = require("./routes/events.js");
+
+const keyPublishable = process.env.PUBLISHABLE_KEY;
+const keySecret = process.env.SECRET_KEY;
+const stripe = require("stripe")(keySecret);
 mongoose.connect("mongodb://localhost:27017/awaaz", { useNewUrlParser: true });
 app.set('view engine', 'ejs');
 //app.use('/assets', express.static('/assets'));
 app.use(express.static(__dirname + "/assets"));
-
+app.use(express.static("/views/support"));
 app.use(bodyparser.urlencoded({extended:true}));
+app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.json());
 //===========================================================================================================
 //PASSPORT CONFIG
 app.use(methodOverride("_method"));
