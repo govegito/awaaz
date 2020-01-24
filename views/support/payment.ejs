@@ -1,56 +1,54 @@
-<html>
-  <head>
-    <title>Stripe Checkout Integration</title>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-  </head>
-  <body>
-    <h2>Stripe Checkout Example</h2>
+<%-include("./header.ejs")-%>
+    <h2>Donate</h2>
+    <p>
+      Donations to the society are exempted u/s 80 G of the Income Tax Act as per order no DIT(E)/2011-2012/S-1828/3664 dated 16.11.2011 of the Director of Income Tax (Exemptions), Delhi - 110092.
 
-    <div id="shop">
-      <button id="buttonCheckout">Checkout</button>
+      We are also registered to accept foreign contributions under the Foreign Contribution (Regulation) Act, 1976 vide No. 231650952.
+
+      Our Accounts are maintained in a professional manner by a full-time Secretary and audited annually by a Chartered Accountant. We also have a full-time person to maintain the accounts of Suniye. So if you want to find out where your money has been utilized, you can always contact us directly
+    </p>
+    <div class="container">
+      <h2>Donate By Credit Card</h2>
+      <div class="row">
+        <div class="col-">
+          <h4>Payment is USD</h4>
+          <span>Foreign Donations: Please enter the amount in US Dollars</span>
+            <div class="form-group">
+              <input class="form-control" type="text" name="amount" placeholder="amount is USD">
+            </div>
+            <div id="shop">
+              <button id="buttonCheckoutusd">Checkout</button>
+            </div>
+        </div>
+        <div class="col-">
+          <h4>Payment is INR</h4>
+          <span>Foreign Donations: Please enter the amount in indian rupees</span>
+            <div class="form-group">
+              <input class="form-control" type="text" name="amount" placeholder="amount is inr">
+            </div>
+            <div id="shop">
+              <button id="buttonCheckoutinr">Checkout</button>
+            </div>
+        </div>
+      </div>
     </div>
-  </body>
 
-  <script>
-var checkoutHandler = StripeCheckout.configure({
-  key: "pk_test_u2VtG4jV6bgpQfdrEE8xqIVn00yTKeCJ40",
-  locale: "auto"
-});
-var button = document.getElementById("buttonCheckout");
-button.addEventListener("click", function(ev) {
-  checkoutHandler.open({
-    name: "Sample Store",
-    description: "Example Purchase",
-    token: handleToken
-  });
-});
-function handleToken(token) {
-  fetch("/charge", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(token)
-  })
-  .then(output => {
-    if (output.status === "succeeded")
-      document.getElementById("shop").innerHTML = "<p>Purchase complete!</p>";
-  })
-}
-fetch("/charge", {
-  method: "POST",
-  headers: {"Content-Type": "application/json"},
-  body: JSON.stringify(token)
-})
-.then(response => {
-  if (!response.ok)
-    throw response;
-  return response.json();
-})
-.then(output => {
-  console.log("Purchase succeeded:", output);
-})
-.catch(err => {
-  console.log("Purchase failed:", err);
-})
+    <h2>Donate By Bank Transfer</h2>
+    <p>
+      Please send your donations to the following bank account:
 
-  </script>
-</html>
+      Name of bank: Syndicate Bank, Sector 23, H.K.Puram, New Delhi-110022
+      Account Title: Awaaz
+      Account Number: 90562010046606
+      Type of Account: Savings Bank
+      IFSC Code: SYNB 0009009
+      Our Address: Opposite House No. 828, Type 1 Quarters, Sector 23, H.K.Puram, New Delhi - 110022, India
+    </p>
+
+    <h2>Donate By Cheque</h2>
+    <p>
+      Please download the Donation Form, fill it up and mail it with your crossed cheque to:
+
+      The Secretary, Awaaz, Opposite House No. 828, Type 1 Quarters, Sector 23, H.K. Puram, New Delhi-110022, India
+    </p>
+    <%-include("./footer.ejs")-%>

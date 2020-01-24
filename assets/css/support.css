@@ -1,0 +1,29 @@
+.volunbutton{
+   width: 330px;
+   height: 200px;
+   overflow: hidden;
+}
+.volunbutton img{
+    width: 330px;
+    height: 200px;
+    filter: brightness(40%);
+    overflow: hidden;
+    transition: transform .5s ease;
+  }
+.volunbutton:hover img{
+    transform: scale(1.5);
+    filter: brightness(60%);
+}
+
+.row{
+    display: flex;
+    justify-content: space-around    
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 1.5em;
+  }
