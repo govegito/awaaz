@@ -58,3 +58,23 @@ border-radius: 10%;
 .congress{
     width:60%;
 }
+.fa.fa-linkedin-square{
+    color:  #0976b4;
+}
+.fa.fa-facebook-square{
+    color:#3b5998;
+}
+.fa.fa-twitter-square{
+    color:#258ddd;
+}
+.fa.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
