@@ -1,0 +1,154 @@
+.jumbotron-speech{
+    background-color: transparent;
+    color: rgb(6, 68, 92);
+    font-weight: 600;
+    
+}
+
+#speech-body{
+    background-image: url("https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.speech-content{
+    margin-top: 4px;
+    padding-top: 5px;
+    background-color: ivory;
+    z-index: 1;
+}
+.speech-heading{
+    margin-top: 50px;
+    color: rgb(6, 68, 92);
+    font-weight: 600;
+}
+.speech-desc{
+    background-color: lightgoldenrodyellow;
+    width: auto;
+    height:120px;
+    overflow: scroll;
+    margin-bottom: 50px;
+}
+
+
+
+.jumbotron-vision{
+    background-color: transparent;
+    color: rgb(6, 68, 92);
+    font-weight: 600;
+    
+}
+
+#vision-body{
+    background-image: url("https://images.unsplash.com/photo-1552833287-c19070e00073?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1761&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.vision-content{
+    margin-top: 4px;
+    padding-top: 5px;
+    
+}
+
+.section-1{
+    display: flex;
+    height: 15rem;
+    background-color: rgb(224, 255, 224);
+    text-align: center;
+}
+.section-1 h4{
+   
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    color: rgb(6, 68, 92);
+    font-weight: 600;
+    align-self: center;
+
+}
+.section-2{
+    display: flex;
+    height: 22rem;
+    background-color: rgb(219, 247, 255);
+    text-align: center;
+    opacity: 0.9;
+}
+.section-2 p{
+    padding-left: 20%;
+    padding-right: 19%;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+}
+
+.section-3{
+    display: flex;
+    height: 20rem;
+    background-color: rgb(245, 253, 227);
+    text-align: center;
+}
+.section-3 p{
+    padding-left: 20%;
+    padding-right: 19%;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+}
+.section-4{
+    display: flex;
+    height: 22rem;
+    background-color: rgb(255, 234, 228);
+    text-align: center;
+    opacity: 0.9;
+}
+.section-4 p{
+    padding-left: 20%;
+    padding-right: 19%;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+}
+
+#team-head{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 134);
+    height: 4rem;
+}
+
+.clo-lg-4{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    height: 35rem;
+}
+.card img{
+    height: 13rem;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  tr:hover {background-color: #f5f5f5;}
+#table-employ{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5rem;
+}
+#awards{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+#awards img {
+    filter: brightness(50%);
+    height: 40rem;
+}
