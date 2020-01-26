@@ -85,7 +85,7 @@ background-size: cover;
  border: none;
  padding-bottom: 20px;
 }
-.card-body{
+.card1 .card-body{
   width: auto;
   height: 40vh;
   overflow: scroll;
