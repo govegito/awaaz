@@ -20,6 +20,17 @@ $(document).ready(function(){
             
 
         }
+        if(positiontop>250){
+            $(".aboutus-col").addClass("animated flipInY");
+        }
+
+        if(positiontop<1500 && positiontop>1050){
+            $(".ourwork-col strong").addClass("animated jackInTheBox");
+        }
+        if(positiontop>1500){
+            $(".ourwork-col strong").removeClass("animated jackInTheBox");
+            $(".ourwork-col strong").addClass("animated hinge");
+        }
 
     });
 });
