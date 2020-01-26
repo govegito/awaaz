@@ -33,90 +33,110 @@
     </section>
 </footer>
 <script>
-    var checkoutHandler = StripeCheckout.configure({
-      key: "pk_test_u2VtG4jV6bgpQfdrEE8xqIVn00yTKeCJ40",
-      locale: "auto"
+  var checkoutHandler = StripeCheckout.configure({
+  key: "pk_test_u2VtG4jV6bgpQfdrEE8xqIVn00yTKeCJ40",
+  locale: "auto"
+});
+var button = document.getElementById("buttonCheckoutusd");
+button.addEventListener("click", function(ev) {
+  checkoutHandler.open({
+    name: "Sample Store",
+    description: "Example Purchase",
+    token: handleToken
+  });
+});
+
+
+var button = document.getElementById("buttonCheckoutinr");
+
+button.addEventListener("click", function(ev) {
+  console.log("inr chosen");
+  checkoutHandler.open({
+    name: "Sample Store",
+    description: "Example Purchase",
+    token: handleToken
+  });
+});
+
+
+function handleToken(token) {
+  fetch("/chargeusd", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(token)
+  })
+  .then(output => {
+    if (output.status === "succeeded")
+      document.getElementById("shop").innerHTML = "<p>Purchase complete!</p>";
+  })
+}
+fetch("/chargeusd", {
+  method: "POST",
+  headers: {"Content-Type": "application/json"},
+  body: JSON.stringify(token)
+})
+.then(response => {
+  if (!response.ok)
+    throw response;
+  return response.json();
+})
+.then(output => {
+  console.log("Purchase succeeded:", output);
+})
+.catch(err => {
+  console.log("Purchase failed:", err);
+})
+
+  
+  ///for inr
+  var checkoutHandler = StripeCheckout.configure({
+    key: "pk_test_u2VtG4jV6bgpQfdrEE8xqIVn00yTKeCJ40",
+    locale: "auto"
+  });
+
+  var button = document.getElementById("buttonCheckoutinr");
+
+  button.addEventListener("click", function(ev) {
+    console.log("inr chosen");
+    checkoutHandler.open({
+      name: "Sample Store",
+      description: "Example Purchase",
+      token: handleToken
     });
-    var button = document.getElementById("buttonCheckoutusd");
-    button.addEventListener("click", function(ev) {
-      checkoutHandler.open({
-        name: "Awaaz Foundation",
-        description: "Donation for betterment",
-        token: handleToken
-      });
-    });
-    function handleToken(token) {
-      fetch("/chargeusd", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(token)
-      })
-      .then(output => {
-        if (output.status === "succeeded")
-          document.getElementById("shop").innerHTML = "<p>Purchase complete!</p>";
-      })
-    }
+  });
+  
+  function handleToken(token) {
     fetch("/chargeusd", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(token)
     })
-    .then(response => {
-      if (!response.ok)
-        throw response;
-      return response.json();
-    })
     .then(output => {
-      console.log("Purchase succeeded:", output);
+      if (output.status === "succeeded")
+        document.getElementById("shop").innerHTML = "<p>Purchase complete!</p>";
     })
-    .catch(err => {
-      console.log("Purchase failed:", err);
-    })
-    
-    ///for inr
-    var checkoutHandler = StripeCheckout.configure({
-      key: "pk_test_u2VtG4jV6bgpQfdrEE8xqIVn00yTKeCJ40",
-      locale: "auto"
-    });
-    var button = document.getElementById("buttonCheckoutinr");
-    button.addEventListener("click", function(ev) {
-      checkoutHandler.open({
-        name: "Awaaz Foundation",
-        description: "Donation for betterment",
-        token: handleToken
-      });
-    });
-    function handleToken(token) {
-      fetch("/chargeinr", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(token)
-      })
-      .then(output => {
-        if (output.status === "succeeded")
-          document.getElementById("shop").innerHTML = "<p>Purchase complete!</p>";
-      })
-    }
-    fetch("/chargeinr", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(token)
-    })
-    .then(response => {
-      if (!response.ok)
-        throw response;
-      return response.json();
-    })
-    .then(output => {
-      console.log("Purchase succeeded:", output);
-    })
-    .catch(err => {
-      console.log("Purchase failed:", err);
-    })
-    
-    
-      </script>
+  }
+  fetch("/chargeusd", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(token)
+  })
+  .then(response => {
+    if (!response.ok)
+      throw response;
+    return response.json();
+  })
+  .then(output => {
+    console.log("Purchase succeeded:", output);
+  })
+  .catch(err => {
+    console.log("Purchase failed:", err);
+  })
+  
+    </script>
 </body>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
