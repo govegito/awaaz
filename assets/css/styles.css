@@ -43,21 +43,8 @@ button.navbar-toggler{
     background-color: #d3d3d3;
     list-style-type: none;
 }
-.forumjumbo{
-    background-image: url("https://www.wfh.org/globalforum/en/image/slider-home/gf_slider_bg.jpg");
-    background-size: cover;
-    color: #fff;
-}
-.j3{
-    width: 50px;
-}
-.j2{
-border: 3px solid blue;
-border-radius: 10%;
-}
-.congress{
-    width:60%;
-}
+
+
 .fa.fa-linkedin-square{
     color:  #0976b4;
 }
@@ -78,3 +65,32 @@ border-radius: 10%;
   html {
     scroll-behavior: smooth;
   }
+
+
+
+  /* ==========================  LANDING PAGE =====================  */
+  .landingpartner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .partnericons{
+      display: flex;
+      justify-content: space-around;
+  }
+  .fak {
+    font-size: 3em;
+    width: 2em;
+    height: 1.5em;
+    text-align: center;
+  }
+  .fa-openid {
+    color: #F78C40;
+  }
+  .fa-opera {
+    color: #cc0f16;
+  }
+  .fa-paypal{color: #253b80}
+  .fa-pinterest-square{color: #cc2127}
+  .fa-ra{color: #000;}
+  .fa-reddit{color: #ff4500}

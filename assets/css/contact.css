@@ -50,3 +50,7 @@ hr{
 #h{
 padding-left: 100px;
 }
+#redirect a{
+   font: 25px bold;
+   color: rgb(236, 49, 49);
+}
