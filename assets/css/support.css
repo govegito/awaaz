@@ -3,6 +3,7 @@
    width: 330px;
    height: 200px;
    overflow: hidden;
+   margin-top: 8px;
 }
 .volunbutton img{
     width: 330px;
@@ -18,7 +19,8 @@
 
 .row{
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+    align-items: space-around;
 }
 .centered {
     position: absolute;
