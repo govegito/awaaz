@@ -150,6 +150,11 @@ background: transparent}
   }
   .landsup{
     filter: grayscale(100%);
+    
+  }
+  .don{
+    background: url('https://images.unsplash.com/photo-1567309258733-9bbe3672f827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
   }
  .landsup:hover{ filter: initial; }
   #careerbtn1{
@@ -168,6 +173,13 @@ background: transparent}
     color: rgb(3, 148, 173);
     border: 0px;
   }
+  
+#part,#allevent{background: #D3CCE3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);}
+.bottomh1{
+  font-family:  'Bangers', cursive;
+}
 
   /*============login page ==========*/
   .register{

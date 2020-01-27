@@ -5,13 +5,13 @@
     max-height: 40rem;
     width: 100%;    
 }
-#header-image span{
+#gift-a-smile{
     position: absolute;
     top: 50%;
     left: 70%;
-    transform: translate(-50%, -50%);
+    
     color: aliceblue;
-    font-size: 5em;
+    font-size: 4rem;
     font-family: 'Zhi Mang Xing', cursive;
     
 }
@@ -19,7 +19,6 @@
     position: absolute;
     top: 70%;
     left: 70%;
-    transform: translate(-50%, -50%);
     
 }
 #aboutus{
