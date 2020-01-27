@@ -5,11 +5,11 @@
     max-height: 40rem;
     width: 100%;    
 }
-#gift-a-smile{
+#header-image span{
     position: absolute;
     top: 50%;
     left: 70%;
-    
+    transform: translate(-50%, -50%);
     color: aliceblue;
     font-size: 4rem;
     font-family: 'Zhi Mang Xing', cursive;
@@ -107,12 +107,19 @@ font-family: 'Indie Flower', cursive;
 @media screen and (max-width:500px){
     #header-image span{
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 70%;
         transform: translate(-50%, -50%);
         color: aliceblue;
         font-size: 2em;
         font-family: 'Zhi Mang Xing', cursive;
+        
+    }
+    #header-image a{
+        position: absolute;
+        top: 58%;
+        left: 70%;
+
         
     }
 }
