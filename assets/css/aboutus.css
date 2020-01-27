@@ -163,3 +163,61 @@ table, th, td {
 .employ-body{
     background-image: url("https://images.unsplash.com/photo-1546448396-6aef80193ceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
 }
+
+@media screen and (max-width:500px){
+    .section-2{
+        width: fit-content;
+        display: flex;
+        min-height: 22rem;
+        background-color: rgb(219, 247, 255);
+        text-align: center;
+        opacity: 0.9;
+    }
+    .section-2 p{
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: center;
+        font-weight: 600;
+        align-self: center;
+    }
+    .section-2 img{
+        height: 0;
+        width: 0;
+    }
+    .section-3{
+        width: fit-content;
+        display: flex;
+        min-height: 20rem;
+        background-color: rgb(245, 253, 227);
+        text-align: center;
+    }
+    .section-3 p{
+        padding-left: 20%;
+        padding-right: 19%;
+        text-align: center;
+        font-weight: 600;
+        align-self: center;
+    }
+    .section-4{
+        width: fit-content;
+        display: flex;
+        min-height: 22rem;
+        background-color: rgb(255, 234, 228);
+        text-align: center;
+        opacity: 0.9;
+    }
+    .section-4 p{
+        width: fit-content;
+        display: flex;
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: center;
+        font-weight: 600;
+        align-self: center;
+    }
+    .section-4 img{
+        height: 0;
+        width: 0;
+    }
+
+}
