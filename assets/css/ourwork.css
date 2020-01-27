@@ -141,9 +141,14 @@
 
 
 @media screen and (max-width:500px){
-
+    .ourapp-centered{
+        position: absolute;
+        top: 60%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        margin-top: 13rem;
+    }
     .ourapp-centered h1{
-      
         color: aliceblue;
         font-size: 2rem;
       }
