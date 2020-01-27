@@ -24,7 +24,8 @@ var crypto                  = require("crypto");
 const keyPublishable = process.env.PUBLISHABLE_KEY;
 const keySecret = process.env.SECRET_KEY;
 const stripe = require("stripe")(keySecret);
-mongoose.connect("mongodb://localhost:27017/awaaz", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://anu123:apple123@cluster0-5c5ij.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
+
 app.set('view engine', 'ejs');
 //app.use('/assets', express.static('/assets'));
 app.use(express.static(__dirname + "/assets"));
