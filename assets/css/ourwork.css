@@ -1,0 +1,206 @@
+.ourapp-head{
+    width: 100%;
+    height: 35rem;
+    
+
+}
+.ourapp-head img{
+    image-orientation: flip;
+    height: 100%;
+    width: 100%;
+    filter: brightness(70%);
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.ourapp-centered {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 1.5em;
+  }
+
+  .ourapp-centered h1{
+      opacity: 0;
+      font-size: 4rem;
+      margin-bottom: 500px;
+      animation: movedown 1.1s forwards 0.2s linear;
+      
+  }
+  @keyframes movedown{
+      100%{
+          opacity: 1;
+          margin-bottom: 0;
+      }
+  }
+
+    .ourapp-centered h4{
+      opacity: 0;
+      margin-top: 500px;
+      animation: moveup 1.1s forwards 0.5s linear;
+      
+  }
+  @keyframes moveup{
+      100%{
+          opacity: 1;
+          margin-top: 0;
+      }
+  }
+.ourapp-row{
+    display: flex;
+    justify-content: space-around;
+}
+  .ourapp-blocks{
+      height: 28rem;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: movedown 1s forwards 0.3s linear;
+  }
+
+  .ourapp-blocks img{
+      height: 100%;
+      width: 100%;
+      
+  }
+  .ourapp-blocks p{
+    font-size: 1.2rem;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#ourapp-section1{
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+#ourapp-section1 p{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: cornsilk;
+}
+
+#training-head{
+    background: #1CD8D2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: honeydew;
+}
+#training-head h1{
+    font-size: 2.7rem;
+}
+#training-head p{
+    font-size: 1.2rem;
+}
+
+#training-body1{
+    background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#training-body2{
+    background-image: url("https://images.unsplash.com/photo-1520758594221-872948699332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#training-row{
+    height: 40rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+
+}
+
+.training-col{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 3rem;
+    height: 35rem;
+    max-width: 17%;
+    margin-top: 3rem;
+    padding: 0.3rem;
+}
+.training-col img{
+    padding:0;
+    width: 100%;
+    height: 10rem;
+}
+
+
+@media screen and (max-width:500px){
+
+    .ourapp-centered h1{
+      
+        color: aliceblue;
+        font-size: 2rem;
+      }
+    .ourapp-centered h4{
+       font-size: 1rem;
+    }
+
+    .ourapp-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+      .ourapp-blocks{
+          height: 28rem;
+          width: 100%;
+          
+          animation: movedown 1s forwards 0.3s linear;
+      }
+      .ourapp-blocks p{
+        font-size: 0.8rem;
+    }
+      #ourapp-section1 p{
+        padding-left: 5%;
+        padding-right: 5%;
+        font-weight: 500;
+        font-size: 1rem;
+        color: cornsilk;
+    }
+    #training-row{
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: transparent;
+    
+    }
+    
+    .training-col{
+        background-color: rgba(255, 255, 255, 0.8);
+        margin-top: 3rem;
+        height: 13rem;
+        overflow: hidden;
+        max-width: 50%;
+        margin-top: 3rem;
+        padding: 0.3rem;
+    }
+    .training-col img{
+        padding:0;
+        width: 100%;
+        height: 10rem;
+    }
+    #training-head h1{
+        font-size: 1.3rem;
+    }
+    #training-head p{
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,70 @@
+<script>
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var positiontop=$(document).scrollTop();
+        console.log(positiontop);
+
+        if(positiontop > 200){
+            $("#img-1").addClass("animated slideInRight");
+            
+
+        }
+        if(positiontop > 650){
+            $("#img-2").addClass("animated slideInLeft");
+            
+
+        }
+        if(positiontop > 1090){
+            $("#ourapp-section1").addClass("animated lightSpeedIn");
+            
+
+        }
+        if(positiontop>250){
+            $(".aboutus-col").addClass("animated flipInY");
+        }
+        if(positiontop>250){
+            $("#upper-text1").addClass("animated fadeInUp");
+        }
+        if(positiontop>900){
+            $("#upper-text2").addClass("animated fadeInUp");
+        }
+        if(positiontop<1500 && positiontop>1150){
+            $(".ourwork-col strong").addClass("animated jackInTheBox");
+        }
+        if(positiontop>1500){
+            $(".ourwork-col strong").removeClass("animated jackInTheBox");
+            $(".ourwork-col strong").addClass("animated hinge");
+        }
+
+        if(positiontop>1400){
+            $("#bottom-text1").addClass("animated fadeInUp ");
+        }
+        if(positiontop>1450){
+            $(".landevent123").addClass("animated fadeInLeft");
+        }
+        if(positiontop>1800){
+            $("#bottom-text2").addClass("animated fadeInUp");
+        }
+        if(positiontop>2000){
+            $("#bottom-text3").addClass("animated fadeInLeft");
+        }
+        if(positiontop>2000){
+            $("#bottom-text4").addClass("animated fadeInRight");
+        }
+        if(positiontop>2300){
+            $("#bottom-text5").addClass("animated fadeInUp");
+        }
+        if(positiontop>2400){
+            $("#bottom-text6").addClass("animated fadeInLeft");
+        }
+        if(positiontop>2500){
+            $("#bottom-text7").addClass("animated fadeInRight");
+        }
+
+
+    });
+});
+
+console.log("anime");
+</script>

@@ -1,0 +1,293 @@
+body{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: auto;
+}
+section{
+  scroll-snap-align: start;
+}
+      .center {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: aliceblue;
+        font-size: 1.5em;
+      }
+      #wsd  p{
+        font-size: 22px;
+      }    
+      #wsd{
+          padding: 18px;
+        background: url('https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=292&q=80');
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: lighten;
+ 
+    }
+    .wsd0 h1{
+      opacity: 0;
+     size: 0.1;
+     margin-bottom: 100px;
+      animation: 2s zoomin 1s forwards;
+    }
+    .wsd0 h2{
+      opacity: 0;
+     size: 0.1;
+     margin-top: 100px;
+      animation: 2s zoomin 1s forwards;
+    }
+    @keyframes zoomin{
+      100%{
+        opacity: 1;
+        margin: 0;
+        transform: scale3d(5);
+      }
+    }
+#wsd2 {
+    padding: 20px;
+    background: url("https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=292&q=80");
+background-attachment: fixed;
+background-size: cover;
+
+}
+.thumbnail>img{
+    width: 100%;
+    height: 40vh;
+    filter: brightness(50%);
+    
+}
+.thumbnail>img:hover{
+    filter: brightness(100%);
+    
+}
+#wsdh2{
+  background-color: rgb(193, 241, 171);
+  padding: 10px 15px;
+  font:  bold sans-serif;
+}
+
+
+/*  global forum */
+#gf2{
+  background: rgb(128,160,185);
+  background: radial-gradient(circle, rgba(128,160,185,0.4430147058823529) 0%, rgba(28,219,227,0.8799894957983193) 85%);
+}
+#gf2 h3{
+  font-weight: 500;
+}
+.gf2{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.card1{
+ border: none;
+ padding-bottom: 20px;
+}
+.card1 .card-body{
+  width: auto;
+  height: 40vh;
+  overflow: scroll;
+
+  background-color: rgb(198, 242, 243);
+}
+
+.gf1{
+  background-color: lightgoldenrodyellow;
+}
+hr{
+  width: 80%;
+  height: 10px;
+  color: black;
+}
+
+/*section hero styles*/
+
+.hero,.h1{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ text-align: center;
+ min-height: 100vh;
+ color: whitesmoke;
+ padding: 60px 80px;
+ margin: 0;
+
+}
+.h1 .background-image{position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: #80a3db;
+  filter: brightness(50%);
+  -webkit-animation: backgroundScroll 10s linear infinite;
+  animation: backgroundScroll1 10s linear ;}
+.hero .background-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: #80a3db;
+  filter: brightness(50%);
+  -webkit-animation: backgroundScroll 10s linear infinite;
+  animation: backgroundScroll 10s linear ;
+}
+.hero  h2{
+  font: bold 45px 'Open Sans', sans-serif;
+  margin-bottom: 0px;
+}
+.hero h3{
+  font: 25px normal 'Open Sans', sans-serif;
+  margin-bottom: 25px;
+}
+.h1  h2{
+  font: bold 45px 'Open Sans', sans-serif;
+  margin-bottom: 0px;
+}
+.h1 h3{
+  font: 25px normal 'Open Sans', sans-serif;
+  margin-bottom: 25px;
+}
+.hero-content h2{
+  opacity: 0;
+  margin-top: 100px;
+  animation: 1s slidein 1s forwards;
+}
+.hero-content h3{
+  opacity: 0;
+  margin-top: 100px;
+  animation: 1s slidein 1.5s forwards;
+}
+@keyframes slidein{
+  100%{opacity: 1;
+  margin: 0;}
+}
+@media (max-width:800px){
+  .hero h2{
+    font-size: 40px;
+  }
+  .hero h3{
+      font-size: 12px;
+  }
+}
+  
+  @-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -100px 0;}
+  }
+          
+  @keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -100px 0;}
+  }
+  @-webkit-keyframes backgroundScroll1 {
+    from {background-position: 0 20px;}
+    to {background-position: 0 -50px;}
+    }
+            
+    @keyframes backgroundScroll1 {
+    from {background-position: 0 20px;}
+    to {background-position: 0 -50px;}
+    }
+  
+
+
+
+  /*national Congress*/
+  @keyframes slidedn{
+    100%{opacity: 1;
+    margin: 0;}
+  }
+.nathead h2{
+  opacity: 0;
+  margin-bottom: 100px;
+  animation: 1s slidedn 1s forwards;
+}
+.nathead h3{
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+
+.congress{
+    width:100%;
+    background-color: rgb(199, 224, 245);
+    margin: 0;
+    padding: 40px 20px;
+}
+
+
+
+
+.speaker{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.speaker img{
+  width: 290px;
+  height: 275px;
+  padding-right: 20px;
+}
+#nat2{
+  background-image: url("https://images.unsplash.com/photo-1485579149621-3123dd979885?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+#nat2 p{
+  padding: 3px 10px;
+}
+.v1{
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+.v1 img{
+   width: 400px;
+   height: 200px;
+   filter: brightness(40%);
+   overflow: hidden;
+   transition: transform .5s ease;
+ }
+.v1:hover img{
+   transform: scale(1.5);
+   filter: brightness(60%);
+}
+
+.v2{
+   display: flex;
+   justify-content: center;
+}
+.v2 > img {
+  align-self: center;
+}
+.centered {
+   position: absolute;
+   top: 50%;
+   left: 60%;
+   transform: translate(-50%, -50%);
+   color: aliceblue;
+   font-size: 1.5em;
+ }
+
+
+.v1 {
+  margin: 4px 0px;
+  border-radius: 50%;
+  zoom: 1.3;
+  padding: 0;
+}
+
+.speaker h5{
+  font: 22px  Roboto;
+  font-weight: 900;
+}
+
+
