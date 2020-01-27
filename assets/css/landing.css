@@ -100,3 +100,20 @@
     font-family: 'Zhi Mang Xing', cursive;
 font-family: 'Indie Flower', cursive;
 }
+
+.gift-a-smile{
+    font-size: 0.5rem;
+}
+
+@media screen and (max-width:500px){
+    #header-image span{
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        color: aliceblue;
+        font-size: 2em;
+        font-family: 'Zhi Mang Xing', cursive;
+        
+    }
+}
