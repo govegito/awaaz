@@ -1,7 +1,7 @@
 <%- include ("partials/header") -%>
 
-<div class="container">
-        <div style="width: 25%; margin:30px auto">
+<div class="container" style="background-image: url('../images/nav-bg.png');">
+        <div style="width: 35%; margin:50px auto" id="log">
                 <form action="/login" method="POST">
     <div class="form-group">
             <input class="form-control" type="text" name="username" placeholder="username">
@@ -15,10 +15,11 @@
 </div>
 
 </form>
-<a style="font-size: large;" href="/register">Don't have an account?</a>
-<a style="font-size: large;" href="/forgot">Forgot Password?</a>
-
+<a style="font-size: 1.3rem;" href="/register">Don't have an account?</a>
+<a style="font-size: 1.3rem;  " href="/forgot">Forgot Password?</a>
 
 </div>
 </div>
+
+
 <%- include ("partials/footer") -%>

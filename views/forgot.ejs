@@ -1,8 +1,8 @@
 <%- include("partials/header") -%>
-<div class="row">
-	<div class="col-md-12">
-		<form action="/forgot" method="POST">
-			<legend>Forgot Password</legend>
+<div class="row forgot">
+	<div class="col-md-12" class="forgot">
+		<form style="width: 75%;" action="/forgot" method="POST">
+			<legend>An email with a reset link will be sent to your email which is valid for 60 minutes.</legend>
 			<div class="form-group">
 				<label for="email">Email</label>
 				<input type="email" name="email" autofocus class="form-control">
